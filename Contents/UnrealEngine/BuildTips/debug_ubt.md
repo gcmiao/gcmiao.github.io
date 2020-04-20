@@ -2,8 +2,8 @@ Steps:
 1. Set UnrealBuildTool as startup project.
 2. Open UnrealBuildTool Properties page.
 3. Add arguments to the *'Command line arguments'* under the section *'Debug'*
-   a. If you want to debug generating project file phase, use `-ProjectFiles`
-   b. If you want to debug building phase, use parameters from the *'BuildCommandLine'* of UE4 Property Page which is exactly executed when you build the project as usual.
+   + If you want to debug generating project file phase, use `-ProjectFiles`
+   + If you want to debug building phase, use parameters from the *'BuildCommandLine'* of UE4 Property Page which is exactly executed when you build the project as usual.
 
 Tips: Sometime the break points will not be triggered without any reason. It often happens after you execute GenerateProjectFiles.bat or other scripts that call UBT from commandline. In this case, you just need to rebuild UBT.
 
@@ -18,5 +18,4 @@ Then you can start your debug. Have fun!
 <!-- Place this tag where you want the button to render. -->
 <a class="github-button" href="https://github.com/gcmiao" aria-label="Follow @gcmiao on GitHub">Follow @gcmiao</a>
 
-<br>
-[Go back Home](/README.md)
+[Go back Home](/)
