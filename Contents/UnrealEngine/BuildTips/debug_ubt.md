@@ -12,13 +12,13 @@ Then you can start your debug. Have fun!
 ------
 <table style="text-align:left">
   <tr>
-    <th style="border:none;padding: 0px;">
-        <sup>Any problems with this article, feel free to rise an issue to me.</sup>
+    <td style="border:none;padding: 0px;">
+        <sup>For any problems about this article, feel free to rise an issue to me.</sup>
         <!-- Place this tag in your head or just before your close body tag. -->
         <script async defer src="https://buttons.github.io/buttons.js"></script>
         <!-- Place this tag where you want the button to render. -->
         <a class="github-button" href="https://github.com/gcmiao/gcmiao.github.io/issues" data-icon="octicon-issue-opened" aria-label="Issue gcmiao/gcmiao.github.io on GitHub">Issue</a>
-    </th>
+    </td>
   </tr>
   <tr>
     <td style="border:none;padding: 0px;">
