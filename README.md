@@ -5,8 +5,8 @@
 ## Unreal Engine
 ### Build Tips
 
-- [Cannot see source files in Visual Studio](Contents/UnrealEngine/BuildTips/show_source_files.md)
-- [Debug UnrealBuildTool](Contents/UnrealEngine/BuildTips/debug_ubt.md)
+- [Why cannot we see source files in Visual Studio](Contents/UnrealEngine/BuildTips/show_source_files.md)
+- [How to debug UnrealBuildTool](Contents/UnrealEngine/BuildTips/debug_ubt.md)
 
 
 ------
