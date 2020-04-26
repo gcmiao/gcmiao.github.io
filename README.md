@@ -8,6 +8,8 @@
 - [Why cannot we see source files in Visual Studio](Contents/UnrealEngine/BuildTips/show_source_files.md)
 - [How to debug UnrealBuildTool](Contents/UnrealEngine/BuildTips/debug_ubt.md)
 
+### Debug Tips
+- [Enable Vulkan validation layer](Contents/UnrealEngine/DebugTips/enable_vulkan_validation.md)
 
 ------
 <table style="text-align:left">
