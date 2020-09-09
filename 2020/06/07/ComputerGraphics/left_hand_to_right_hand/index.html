@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Convert Coordinate in Left-handed System to Right-handed System | Welcome to Chang&#39;s Pages</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="UE4 is using left-handed coordinate system which is clockwise when viewing from the top. However the data we use is sampled in right-handed system which is counter-clockwise when viewing from the top.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Convert Coordinate in Left-handed System to Right-handed System">
+<meta property="og:url" content="http://https//gcmiao.github.io/2020/06/07/ComputerGraphics/left_hand_to_right_hand/index.html">
+<meta property="og:site_name" content="Welcome to Chang&#39;s Pages">
+<meta property="og:description" content="UE4 is using left-handed coordinate system which is clockwise when viewing from the top. However the data we use is sampled in right-handed system which is counter-clockwise when viewing from the top.">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-06-07T08:12:26.000Z">
+<meta property="article:modified_time" content="2020-09-09T14:53:25.489Z">
+<meta property="article:author" content="Chang">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Welcome to Chang's Pages" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Welcome to Chang&#39;s Pages</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://https://gcmiao.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-ComputerGraphics/left_hand_to_right_hand" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2020/06/07/ComputerGraphics/left_hand_to_right_hand/" class="article-date">
+  <time class="dt-published" datetime="2020-06-07T08:12:26.000Z" itemprop="datePublished">2020-06-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Computer-Graphics/">Computer Graphics</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Convert Coordinate in Left-handed System to Right-handed System
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>UE4 is using left-handed coordinate system which is clockwise when viewing from the top. However the data we use is sampled in right-handed system which is counter-clockwise when viewing from the top. If we use the data directly in UE4, we gets a lying down viewport. So we have to convert the coordinate into left-handed coordinate system at first.</p>
+<p>We have already known that $Coordinate;in;Screen;Space = Projection Matrix \times View Matrix \times Model Matrix \times Coordinate;in;Local;Space$. The coordinate conversion happens in <em>World Space</em> that we can get from $Model Matrix \times Coordinate;in;Local;Space$. The only thing we need to do is modifying the <em>Model Matrix</em> that is equal to $Translation \times Rotation \times Scale$. But we cannot simplely multipy an extra rotation matrix on the left or right side because it will break the construction order of model matrix. So We have to transfer each component of model matrix respectively.</p>
+<p>For example, we need to convert a position $(x, y, z)$ to $(-z, x, y)$, the new position is $x’ = y, y’ = z, z’ = -x$. We can get translation component from model matrix directly then shift the three axes.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">auto translation &#x3D; modelMatrix[3]</span><br><span class="line">auto newTrans &#x3D; glm::vec3(translation.y, translation.z, -translation.x)</span><br></pre></td></tr></table></figure>
+<p> For rotation, we can convert the rotation matrix without scale into quaternion and shift the three axes as before in quaternion then convert it back to rotation matrix. It is easier to do based on glm library than constructing a rotation matrix.<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">auto newQuat &#x3D; glm::quat(oldQuat.W, oldQuat.Y, oldQuat.Z, -oldQuat.X);</span><br><span class="line">auto rotMat &#x3D; glm::mat3_cast(newQuat);</span><br></pre></td></tr></table></figure><br>For scale, I haven’t tried it yet but it would be similar.</p>
+<hr>
+<table style="text-align:left">
+  <tr>
+    <td style="border:none;padding: 0px;">
+        <sup>For any problems about this article, feel free to rise an issue to me.</sup>
+        <!-- Place this tag in your head or just before your close body tag. -->
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
+        <!-- Place this tag where you want the button to render. -->
+        <a class="github-button" target="_blank" rel="noopener" href="https://github.com/gcmiao/gcmiao.github.io/issues" data-icon="octicon-issue-opened" aria-label="Issue gcmiao/gcmiao.github.io on GitHub">Issue</a>
+    </td>
+  </tr>
+  <tr>
+    <td style="border:none;padding: 0px;">
+        <sup>If this article is usful for you, welcome to follow my github.</sup>
+        <!-- Place this tag where you want the button to render. -->
+        <a class="github-button" target="_blank" rel="noopener" href="https://github.com/gcmiao" aria-label="Follow @gcmiao on GitHub">Follow @gcmiao</a>
+    </td>
+  </tr>
+</table>
+
+<p><a href="/">Go back Home</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://https//gcmiao.github.io/2020/06/07/ComputerGraphics/left_hand_to_right_hand/" data-id="ckevi6csp00005ihme123h4iz" data-title="Convert Coordinate in Left-handed System to Right-handed System" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/04/26/UnrealEngine/DebugTips/enable_vulkan_validation/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">How to Enable Vulkan Validation Layer</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Graphics/">Computer Graphics</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Unreal-Engine/">Unreal Engine</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Unreal-Engine/Build-Tips/">Build Tips</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Unreal-Engine/Debug-Tips/">Debug Tips</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/UE4/" rel="tag">UE4</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/UE4/" style="font-size: 10px;">UE4</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/06/07/ComputerGraphics/left_hand_to_right_hand/">Convert Coordinate in Left-handed System to Right-handed System</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/26/UnrealEngine/DebugTips/enable_vulkan_validation/">How to Enable Vulkan Validation Layer</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/05/UnrealEngine/BuildTips/show_source_files/">Why Cannot We See Source Files in Visual Studio</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/05/UnrealEngine/BuildTips/debug_ubt/">How to Debug UnrealBuildTool</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Chang<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
