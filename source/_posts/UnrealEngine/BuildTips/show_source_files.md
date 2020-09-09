@@ -1,4 +1,12 @@
-# Why cannot we see source files in Visual Studio
+---
+title: Why Cannot We See Source Files in Visual Studio
+date: 2020/4/5 21:43:10
+categories:
+- Unreal Engine
+- Build Tips
+tags:
+- UE4
+---
 
 In my current project, I need to add a third party library with source files. Before this, I only have expericence that adding prebuilt library such as .lib files. This time, I create a new folder and module files, i.e. IXXLib.h， XXLib.cpp and XXLib.build.cs, under the path *'UnrealEngine\Engine\Plugins\MyPlugin\Source\ThirdParty\XXLib'* because I don't want to expose it to other modules explicitly. But After I regenerating the project file, I didn't find any files under the folder except those three module files.
 

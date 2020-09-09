@@ -1,4 +1,8 @@
-# Convert Coordinate in Left-handed System to Right-handed System
+---
+title: Convert Coordinate in Left-handed System to Right-handed System
+date: 2020/6/7 10:12:26
+categories: Computer Graphics
+---
 
 UE4 is using left-handed coordinate system which is clockwise when viewing from the top. However the data we use is sampled in right-handed system which is counter-clockwise when viewing from the top. If we use the data directly in UE4, we gets a lying down viewport. So we have to convert the coordinate into left-handed coordinate system at first.
 

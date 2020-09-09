@@ -1,4 +1,13 @@
-# How to debug UnrealBuildTool
+---
+title: How to Debug UnrealBuildTool
+date: 2020/4/5 21:43:02
+categories:
+- Unreal Engine
+- Build Tips
+tags:
+- UE4
+---
+
 Steps:
 1. Set UnrealBuildTool as startup project.
 2. Open UnrealBuildTool Properties page.
