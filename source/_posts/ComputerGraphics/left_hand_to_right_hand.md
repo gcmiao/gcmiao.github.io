@@ -1,6 +1,7 @@
 ---
 title: Convert Coordinate in Left-handed System to Right-handed System
 date: 2020/6/7 10:12:26
+cover: https://upload.wikimedia.org/wikipedia/commons/e/e2/Cartesian_coordinate_system_handedness.svg
 categories: Computer Graphics
 ---
 

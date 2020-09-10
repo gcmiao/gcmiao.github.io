@@ -1,11 +1,13 @@
 ---
 title: How to Enable Vulkan Validation Layer
 date: 2020/4/26 18:44:39
+cover: /img/Vulkan_500px_Dec16.jpg
 categories:
 - Unreal Engine
 - Debug Tips
 tags:
 - UE4
+- Vulkan
 ---
 
 Vulkan validation layer in UE4 is not enabled by default. We can see the codes in `VulkanLayers.cpp` around line 300:

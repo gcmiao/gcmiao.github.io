@@ -1,6 +1,7 @@
 ---
 title: How to Debug UnrealBuildTool
 date: 2020/4/5 21:43:02
+cover: img/vs_2019_splash.jpg
 categories:
 - Unreal Engine
 - Build Tips
