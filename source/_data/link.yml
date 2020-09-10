@@ -3,7 +3,7 @@
   link_list:
     - name: RWTH VCI
       link: https://www.graphics.rwth-aachen.de/
-      avatar: https://www.graphics.rwth-aachen.de/static/headerbar.png
+      avatar: /img/icon_rwth_aachen_vci.jpg
       descr: RWTH Aachen Visual Computing Institute
 
     - name: Uni Bonn SVBRDF Database
@@ -21,7 +21,7 @@
   link_list:
     - name: Mitsuba 2
       link: https://www.mitsuba-renderer.org/
-      avatar: https://www.mitsuba-renderer.org/images-new/mitsuba2.png
+      avatar: /img/icon_mitsuba2.jpg
       descr: Physical Based Renderer
 
 - class_name: Tech Blogs
