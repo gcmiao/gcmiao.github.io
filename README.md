@@ -2,6 +2,6 @@
 
 This project is built based on [Hexo](https://hexo.io/)
 
-Theme: [Landscape](https://github.com/hexojs/hexo-theme-landscape)
+Theme: [Butterfly](https://github.com/gcmiao/hexo-theme-butterfly)
 
 Visit [https://gcmiao.github.io/](https://gcmiao.github.io/) to preview.

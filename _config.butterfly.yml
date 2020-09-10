@@ -616,6 +616,7 @@ aside:
     enable: true
     description:
     button:
+      enable: false
       icon: fas fa-envelope
       text: Mail to Me
       link: mailto:gc@roastew.com
