@@ -1,0 +1,63 @@
+- class_name: Research Institute
+  class_desc:
+  link_list:
+    - name: RWTH VCI
+      link: https://www.graphics.rwth-aachen.de/
+      avatar: https://www.graphics.rwth-aachen.de/static/headerbar.png
+      descr: RWTH Aachen Visual Computing Institute
+
+    - name: Uni Bonn SVBRDF Database
+      link: https://cg.cs.uni-bonn.de/en/projects/svbrdf-database-bonn/ubofab19/
+      avatar: https://cg.cs.uni-bonn.de/phpthumb/phpThumb.php?src=%2Fvar%2Fwww%2Faigaion2root%2Fattachments%2Fappbench_teaser_website.jpg&w=100
+      descr: SVBRDF Database Bonn
+
+    - name: EPFL RGL
+      link: http://rgl.epfl.ch/publications
+      avatar: http://rgl.s3.eu-central-1.amazonaws.com/static/images/epfl%401x.png
+      descr: EPFL Relastic Graphics Lab
+
+- class_name: Software
+  class_desc:
+  link_list:
+    - name: Mitsuba 2
+      link: https://www.mitsuba-renderer.org/
+      avatar: https://www.mitsuba-renderer.org/images-new/mitsuba2.png
+      descr: Physical Based Renderer
+
+- class_name: Tech Blogs
+  class_desc:
+  link_list:
+    - name: Self Shadow
+      link: https://blog.selfshadow.com/
+      avatar:
+      descr:
+
+    - name: Adrian Courrèges
+      link: http://www.adriancourreges.com/
+      avatar:
+      descr:
+    
+    - name: Eric Heitz
+      link: https://eheitzresearch.wordpress.com/research/
+      avatar:
+      descr:
+
+    - name: Ben Golus
+      link: https://medium.com/@bgolus
+      avatar:
+      descr:
+
+    - name: Behind the Pixels
+      link: http://behindthepixels.io/
+      avatar:
+      descr:
+      
+
+- class_name: Dev Tools
+  class_desc:
+  link_list:
+    - name: Vultr
+      link: https://www.vultr.com/?ref=7011630
+      avatar: https://www.vultr.com/media/icon_onwhite.png
+      descr: Cloud Service Provider
+ 
