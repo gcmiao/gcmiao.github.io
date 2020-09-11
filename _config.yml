@@ -29,7 +29,6 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -94,6 +93,8 @@ pagination_dir: page
 include:
 exclude:
 ignore:
+
+skip_render:
   - baidu_verify_code-q875PT2lFX.html
   - googled167f2584e7af24c.html
 
