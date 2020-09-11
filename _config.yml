@@ -94,6 +94,8 @@ pagination_dir: page
 include:
 exclude:
 ignore:
+  - baidu_verify_code-q875PT2lFX.html
+  - googled167f2584e7af24c.html
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
