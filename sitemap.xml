@@ -2,77 +2,77 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://https//gcmiao.github.io/link/index.html</loc>
+    <loc>https://gcmiao.github.io/link/index.html</loc>
     
     <lastmod>2020-09-11</lastmod>
     
   </url>
   
   <url>
-    <loc>http://https//gcmiao.github.io/tags/index.html</loc>
+    <loc>https://gcmiao.github.io/tags/index.html</loc>
     
     <lastmod>2020-09-11</lastmod>
     
   </url>
   
   <url>
-    <loc>http://https//gcmiao.github.io/2020/06/07/ComputerGraphics/left_hand_to_right_hand/</loc>
+    <loc>https://gcmiao.github.io/2020/06/07/ComputerGraphics/left_hand_to_right_hand/</loc>
     
     <lastmod>2020-09-11</lastmod>
     
   </url>
   
   <url>
-    <loc>http://https//gcmiao.github.io/2020/09/11/Vulkan/beware_of_vk_image_layout_undefined/</loc>
+    <loc>https://gcmiao.github.io/2020/09/11/Vulkan/beware_of_vk_image_layout_undefined/</loc>
     
     <lastmod>2020-09-11</lastmod>
     
   </url>
   
   <url>
-    <loc>http://https//gcmiao.github.io/2020/04/05/UnrealEngine/BuildTips/show_source_files/</loc>
+    <loc>https://gcmiao.github.io/2020/04/05/UnrealEngine/BuildTips/show_source_files/</loc>
     
     <lastmod>2020-09-11</lastmod>
     
   </url>
   
   <url>
-    <loc>http://https//gcmiao.github.io/2020/04/05/UnrealEngine/DebugTips/debug_ubt/</loc>
+    <loc>https://gcmiao.github.io/2020/04/05/UnrealEngine/DebugTips/debug_ubt/</loc>
     
     <lastmod>2020-09-11</lastmod>
     
   </url>
   
   <url>
-    <loc>http://https//gcmiao.github.io/2020/04/26/UnrealEngine/DebugTips/enable_vulkan_validation/</loc>
+    <loc>https://gcmiao.github.io/2020/04/26/UnrealEngine/DebugTips/enable_vulkan_validation/</loc>
     
     <lastmod>2020-09-11</lastmod>
     
   </url>
   
   <url>
-    <loc>http://https//gcmiao.github.io/2020/09/11/UnrealEngine/DevelopmentTips/camera_movement_lag/</loc>
+    <loc>https://gcmiao.github.io/2020/09/11/UnrealEngine/DevelopmentTips/camera_movement_lag/</loc>
     
     <lastmod>2020-09-11</lastmod>
     
   </url>
   
   <url>
-    <loc>http://https//gcmiao.github.io/2020/09/11/UnrealEngine/DevelopmentTips/get_real_depth_value/</loc>
+    <loc>https://gcmiao.github.io/2020/09/11/UnrealEngine/DevelopmentTips/get_real_depth_value/</loc>
     
     <lastmod>2020-09-11</lastmod>
     
   </url>
   
   <url>
-    <loc>http://https//gcmiao.github.io/googled167f2584e7af24c.html</loc>
+    <loc>https://gcmiao.github.io/googled167f2584e7af24c.html</loc>
     
     <lastmod>2020-09-11</lastmod>
     
   </url>
   
   <url>
-    <loc>http://https//gcmiao.github.io/categories/index.html</loc>
+    <loc>https://gcmiao.github.io/categories/index.html</loc>
     
     <lastmod>2020-09-11</lastmod>
     
@@ -80,7 +80,7 @@
   
 
   <url>
-    <loc>http://https//gcmiao.github.io</loc>
+    <loc>https://gcmiao.github.io/</loc>
     <lastmod>2020-09-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -88,28 +88,28 @@
 
   
   <url>
-    <loc>http://https//gcmiao.github.io/tags/Vulkan/</loc>
+    <loc>https://gcmiao.github.io/tags/Vulkan/</loc>
     <lastmod>2020-09-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://https//gcmiao.github.io/tags/UE4/</loc>
+    <loc>https://gcmiao.github.io/tags/UE4/</loc>
     <lastmod>2020-09-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://https//gcmiao.github.io/tags/Camera/</loc>
+    <loc>https://gcmiao.github.io/tags/Camera/</loc>
     <lastmod>2020-09-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://https//gcmiao.github.io/tags/Material/</loc>
+    <loc>https://gcmiao.github.io/tags/Material/</loc>
     <lastmod>2020-09-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -118,42 +118,42 @@
 
   
   <url>
-    <loc>http://https//gcmiao.github.io/categories/Computer-Graphics/</loc>
+    <loc>https://gcmiao.github.io/categories/Computer-Graphics/</loc>
     <lastmod>2020-09-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://https//gcmiao.github.io/categories/Vulkan/</loc>
+    <loc>https://gcmiao.github.io/categories/Vulkan/</loc>
     <lastmod>2020-09-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://https//gcmiao.github.io/categories/Unreal-Engine/</loc>
+    <loc>https://gcmiao.github.io/categories/Unreal-Engine/</loc>
     <lastmod>2020-09-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://https//gcmiao.github.io/categories/Unreal-Engine/Build-Tips/</loc>
+    <loc>https://gcmiao.github.io/categories/Unreal-Engine/Build-Tips/</loc>
     <lastmod>2020-09-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://https//gcmiao.github.io/categories/Unreal-Engine/Debug-Tips/</loc>
+    <loc>https://gcmiao.github.io/categories/Unreal-Engine/Debug-Tips/</loc>
     <lastmod>2020-09-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://https//gcmiao.github.io/categories/Unreal-Engine/Development-Tips/</loc>
+    <loc>https://gcmiao.github.io/categories/Unreal-Engine/Development-Tips/</loc>
     <lastmod>2020-09-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
