@@ -4,7 +4,7 @@ date: 2020/4/5 21:43:02
 cover: img/title_vs_2019_splash.jpg
 categories:
 - Unreal Engine
-- Build Tips
+- Debug Tips
 tags:
 - UE4
 ---
